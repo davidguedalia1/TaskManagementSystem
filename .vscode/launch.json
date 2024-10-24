@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run jest",
+            "runtimeExecutable": "jest",
+            "cwd": "${workspaceFolder}",
+            "args": []
+        },
+        {
+            "name": "Debug Jest Tests",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/.bin/jest", // Path to Jest
+            "args": [
+                "--runInBand"
+            ], // To prevent parallel test runs
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "runtimeArgs": [
+                "--inspect-brk" // Enable debugging
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ], // Skip internal Node.js files
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ], // Path to compiled JS if using TypeScript
+        }
+    ]
+}
