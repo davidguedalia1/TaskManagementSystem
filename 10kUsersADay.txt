@@ -1,0 +1,5 @@
+10k users a day
+===============
+Frontend: Use Vercel. It’s built for Next.js, scales automatically, and has a built-in CDN to handle traffic spikes easily.
+Backend: Go with AWS Elastic Beanstalk. It’s simple to set up, handles scaling for you, and integrates well with AWS Cognito for user authentication.
+Database: Use MongoDB Atlas. It’s fully managed, scales easily, and can handle large datasets.
